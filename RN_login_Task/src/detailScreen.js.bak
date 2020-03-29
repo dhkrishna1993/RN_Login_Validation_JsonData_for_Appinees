@@ -1,0 +1,42 @@
+import React,{Component} from "react"
+import {Text,View,Button,StyleSheet,FlatList } from 'react-native'
+
+const data = [
+		{id:1,name:"hari"},
+		{id:2,name:"harik"},
+		{id:3,name:"harikr"},
+		{id:4,name:"harikri"},
+		{id:5,name:"harikris"},
+		{id:6,name:"harikrish"},
+		{id:7,name:"harikrishn"},
+		{id:8,name:"harikrishna"},
+		{id:9,name:"krishna"},
+		{id:10,name:"krishnaHari"},
+		{id:11,name:"hari"},
+		{id:12,name:"hari"},
+		{id:13,name:"hari"},
+
+		]
+
+export default class DetailScreen extends Component{
+	
+    render(){
+        return(
+            <View style={StyleSheet.container}>
+                <Text>DetailScreen</Text>
+		{this.data.map((item,index)=>(
+			<TouchableOpecity key={item.id}>
+			<Text>{item.name}</Text>
+			</TouchableOpecity>
+			))}
+            </View>
+        )
+    }
+}
+
+const styles= StyleSheet.create({
+    container:{
+        flex:1,
+        alignItems:'center'
+    }
+})
